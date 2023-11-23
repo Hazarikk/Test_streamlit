@@ -3,7 +3,7 @@ import firebase_admin
 from firebase_admin import firestore
 from firebase_admin import credentials
 from firebase_admin import auth
-import database as db
+import MoviesProject.database as db
 
 cred = credentials.Certificate("moviehublogindata.json")
 
