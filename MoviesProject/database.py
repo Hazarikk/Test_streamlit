@@ -7,7 +7,7 @@ import sys
 sys.path.append('\\MoviesProject\\')
 
 # Use a service account.
-cred = credentials.Certificate('moviehubdatafirebase.json')
+cred = credentials.Certificate(r"MoviesProject/moviehubdatafirebase.json")
 
 try:
     firebase_admin.initialize_app(cred)
