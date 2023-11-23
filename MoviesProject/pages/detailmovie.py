@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import MoviesProject.database as db
+from MoviesProject import database as db
 import numpy as np 
 
 global dc
