@@ -1,9 +1,13 @@
 import streamlit as st
 from st_pages import Page, Section, show_pages, add_page_title, show_pages_from_config
 from streamlit_option_menu import option_menu
-import MoviesProject.database as db
+import database as db
 import pandas as pd
-import MoviesProject.testforlogin as tfl
+import testforlogin as tfl
+import sys
+
+sys.path.append('\\MoviesProject\\')
+
 
 # add_page_title()
 
