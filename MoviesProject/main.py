@@ -7,9 +7,11 @@ import streamlit_authenticator as stauth
 from PIL import Image
 from st_click_detector import click_detector
 import time
-from MoviesProject.pages import detailmovie
-import MoviesProject.database as db
+from pages import detailmovie
+import database as db
+import sys
 
+sys.path.append('\MoviesProject\')
 
 
 add_page_title()
