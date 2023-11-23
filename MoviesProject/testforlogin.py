@@ -9,7 +9,7 @@ import sys
 sys.path.append('\\MoviesProject\\')
 
 
-cred = credentials.Certificate("moviehublogindata.json")
+cred = credentials.Certificate(r"MoviesProject/moviehublogindata.json")
 
 try:
     firebase_admin.initialize_app(cred)
