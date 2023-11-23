@@ -1,7 +1,10 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-import MoviesProject.testforlogin as tfl
+import testforlogin as tfl
+import sys
+
+sys.path.append('\\MoviesProject\\')
 
 # Use a service account.
 cred = credentials.Certificate('moviehubdatafirebase.json')
