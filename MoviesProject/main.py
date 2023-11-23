@@ -7,7 +7,7 @@ import streamlit_authenticator as stauth
 from PIL import Image
 from st_click_detector import click_detector
 import time
-from pages import detailmovie
+from MoviesProject.pages import detailmovie
 import database as db
 
 
