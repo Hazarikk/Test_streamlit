@@ -14,10 +14,10 @@ sys.path.append('\\MoviesProject\\')
 # # Define the list of pages
 # show_pages(
 #     [
-#         Page("main.py", "Main page", icon="🎥"),
-#         Page("playlist.py", 'Playlist', icon="📼"),
-#         Page("pages/loginpage.py", 'Login', icon="🍿"),
-#         Page("pages/detailmovie.py", 'detail', icon="🎬") #ลองแล้วมึนเดียวมาลองต่อT-T
+#         Page(r"MoviesProject/main.py", "Main page", icon="🎥"),
+#         Page(r"MoviesProject/playlist.py", 'Playlist', icon="📼"),
+#         Page(r"MoviesProject/pages/loginpage.py", 'Login', icon="🍿"),
+#         Page(r"MoviesProject/pages/detailmovie.py", 'detail', icon="🎬") #ลองแล้วมึนเดียวมาลองต่อT-T
 #     ]
 # )
 
@@ -62,14 +62,14 @@ add_page_title()
 # Define the list of pages
 show_pages(
     [
-        Page("main.py", "Main page", icon="🎥"),
-        Page("watchlist.py", 'Watchlist', icon="📼"),
-        Page("pages/loginpage.py", 'Login', icon="🍿"),
-        Page("pages/detailmovie.py", 'detail', icon="🎬")
+        Page(r"MoviesProject/main.py", "Main page", icon="🎥"),
+        Page(r"MoviesProject/watchlist.py", 'Watchlist', icon="📼"),
+        Page(r"MoviesProject/pages/loginpage.py", 'Login', icon="🍿"),
+        Page(r"MoviesProject/pages/detailmovie.py", 'detail', icon="🎬")
     ]
 )
 
-df = pd.read_csv("data/imdb_top_1000.csv")  # read a CSV file
+df = pd.read_csv(r"MoviesProject/data/imdb_top_1000.csv")  # read a CSV file
 df.index = df.loc[:, 'Series_Title']  # change index to Series_Title
 df.drop('Series_Title', axis=1, inplace=True)  # delete Series_Title column
 
