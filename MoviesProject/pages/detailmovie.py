@@ -22,7 +22,7 @@ dc = pd.read_csv(r"MoviesProject/data/comments.csv", index_col=[0])
 # st.write(dc)
 
 
-df = pd.read_csv(r"MoviesProject/data\moviedata.csv")  # read a CSV file
+df = pd.read_csv(r"MoviesProject/data/moviedata.csv")  # read a CSV file
 df.index = df.loc[:,'Series_Title'] #change index to Series_Title
 df.drop('Series_Title', axis=1, inplace=True)#delete Series_Title column
 
@@ -70,13 +70,13 @@ def detail(selected_movie):
             like = df.loc[selected_movie]['Like']
             if st.button(f'{like} LIKE'):
                 df.at[selected_movie,'Like'] += 1
-                df.to_csv(r"MoviesProject/data\moviedata.csv")
+                df.to_csv(r"MoviesProject/data/moviedata.csv")
 
         with col2:
             dislike = df.loc[selected_movie]['Dislike']
             if st.button(f'{dislike} DISLIKE'):
                 df.at[selected_movie,'Dislike'] += 1
-                df.to_csv(r"MoviesProject/data\moviedata.csv")
+                df.to_csv(r"MoviesProject/data/moviedata.csv")
 
         ####COMMENT####
         ####tab1####
@@ -97,7 +97,7 @@ def detail(selected_movie):
                 comment_list = eval(dc['comments'][selected_movie])
             comment_list.append(f'{user_uid} : {comment}')
             dc['comments'][selected_movie] = comment_list
-            dc.to_csv(r"MoviesProject/data\comments.csv")
+            dc.to_csv(r"MoviesProject/data/comments.csv")
     except:
         # st.write('Error')
         pass
