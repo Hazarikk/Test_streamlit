@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
-from MoviesProject import database as db
+import database as db
 import numpy as np 
+
+import sys
+sys.path.append('\\MoviesProject\\')
+
 
 global dc
 global selected_movie
