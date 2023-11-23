@@ -11,7 +11,7 @@ from pages import detailmovie
 import database as db
 import sys
 
-sys.path.append('\MoviesProject\')
+sys.path.append(r'\MoviesProject\')
 
 
 add_page_title()
