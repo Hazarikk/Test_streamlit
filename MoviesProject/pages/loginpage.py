@@ -2,7 +2,10 @@ import streamlit as st
 
 # from streamlit_option_menu import option_menu
 
-import MoviesProject.testforlogin
+import testforlogin
+import sys
+
+sys.path.append('\\MoviesProject\\')
 
 
 def __init__(self):
