@@ -18,10 +18,10 @@ add_page_title()
 
 show_pages(
     [
-        Page("main.py", "Main page", icon="🎥"),
-        Page("watchlist.py", 'Watchlist', icon="📼"),
-        Page("pages/loginpage.py", 'Login', icon="🍿"),
-        Page("pages/detailmovie.py", 'detail', icon="🎬"),
+        Page(r"MoviesProject/main.py", "Main page", icon="🎥"),
+        Page(r"MoviesProject/watchlist.py", 'Watchlist', icon="📼"),
+        Page(r"MoviesProject/pages/loginpage.py", 'Login', icon="🍿"),
+        Page(r"MoviesProject/pages/detailmovie.py", 'detail', icon="🎬"),
         #Page("testWebpage.py", 'testWebpage', icon="🎬"),
         #Page("file path", 'page name', icon="🎬")
     ]
@@ -37,7 +37,7 @@ selected = option_menu(None,["On-Air", 'Coming Soon', "All"],
     icons=['house', 'gear'], menu_icon="cast", default_index=0, orientation="horizontal")
 
 if selected == "On-Air":
-    df = pd.read_csv(r"data/onair.csv")  # read a CSV file
+    df = pd.read_csv(r"MoviesProject/data/onair.csv")  # read a CSV file
 
     st.title("Find movie On-Air")
     text_search = st.text_input("Search ", value="")
@@ -110,7 +110,7 @@ if selected == "On-Air":
 #             st.markdown("***")
 
 if selected == "Coming Soon":
-    df = pd.read_csv(r"data/comingsoon.csv")
+    df = pd.read_csv(r"MoviesProject/data/comingsoon.csv")
     st.title("Find movie comingsoon")
     text_search = st.text_input("Search ", value="")
 
@@ -164,7 +164,7 @@ if selected == "Coming Soon":
         st.markdown("***")
         
 if selected == "All":
-    df = pd.read_csv(r"data/imdb_top_1000.csv")
+    df = pd.read_csv(r"MoviesProject/data/imdb_top_1000.csv")
 
     st.title("Find All movie")
     text_search = st.text_input("Search ", value="")
