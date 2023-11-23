@@ -8,7 +8,7 @@ from PIL import Image
 from st_click_detector import click_detector
 import time
 from MoviesProject.pages import detailmovie
-import database as db
+import MoviesProject.database as db
 
 
 
